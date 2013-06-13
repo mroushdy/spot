@@ -17,7 +17,9 @@
 		59662455176A1A5300A12394 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59662454176A1A5300A12394 /* Default@2x.png */; };
 		59662457176A1A5300A12394 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59662456176A1A5300A12394 /* Default-568h@2x.png */; };
 		5966245A176A1A5300A12394 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59662458176A1A5300A12394 /* MainStoryboard.storyboard */; };
-		5966245D176A1A5300A12394 /* SpotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5966245C176A1A5300A12394 /* SpotViewController.m */; };
+		59662464176A1DF400A12394 /* FlickrFetcher in Resources */ = {isa = PBXBuildFile; fileRef = 59662463176A1DF400A12394 /* FlickrFetcher */; };
+		59662467176A240300A12394 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59662466176A240300A12394 /* ImageViewController.m */; };
+		5966246A176A292700A12394 /* HawaiiImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59662469176A292700A12394 /* HawaiiImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +37,11 @@
 		59662454176A1A5300A12394 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		59662456176A1A5300A12394 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		59662459176A1A5300A12394 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		5966245B176A1A5300A12394 /* SpotViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotViewController.h; sourceTree = "<group>"; };
-		5966245C176A1A5300A12394 /* SpotViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotViewController.m; sourceTree = "<group>"; };
+		59662463176A1DF400A12394 /* FlickrFetcher */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FlickrFetcher; sourceTree = "<group>"; };
+		59662465176A240300A12394 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		59662466176A240300A12394 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		59662468176A292700A12394 /* HawaiiImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HawaiiImageViewController.h; sourceTree = "<group>"; };
+		59662469176A292700A12394 /* HawaiiImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HawaiiImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +88,12 @@
 		59662446176A1A5300A12394 /* Spot */ = {
 			isa = PBXGroup;
 			children = (
-				5966244F176A1A5300A12394 /* SpotAppDelegate.h */,
-				59662450176A1A5300A12394 /* SpotAppDelegate.m */,
 				59662458176A1A5300A12394 /* MainStoryboard.storyboard */,
-				5966245B176A1A5300A12394 /* SpotViewController.h */,
-				5966245C176A1A5300A12394 /* SpotViewController.m */,
+				59662468176A292700A12394 /* HawaiiImageViewController.h */,
+				59662469176A292700A12394 /* HawaiiImageViewController.m */,
+				59662465176A240300A12394 /* ImageViewController.h */,
+				59662466176A240300A12394 /* ImageViewController.m */,
+				59662463176A1DF400A12394 /* FlickrFetcher */,
 				59662447176A1A5300A12394 /* Supporting Files */,
 			);
 			path = Spot;
@@ -96,6 +102,8 @@
 		59662447176A1A5300A12394 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5966244F176A1A5300A12394 /* SpotAppDelegate.h */,
+				59662450176A1A5300A12394 /* SpotAppDelegate.m */,
 				59662448176A1A5300A12394 /* Spot-Info.plist */,
 				59662449176A1A5300A12394 /* InfoPlist.strings */,
 				5966244C176A1A5300A12394 /* main.m */,
@@ -164,6 +172,7 @@
 				59662455176A1A5300A12394 /* Default@2x.png in Resources */,
 				59662457176A1A5300A12394 /* Default-568h@2x.png in Resources */,
 				5966245A176A1A5300A12394 /* MainStoryboard.storyboard in Resources */,
+				59662464176A1DF400A12394 /* FlickrFetcher in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +185,8 @@
 			files = (
 				5966244D176A1A5300A12394 /* main.m in Sources */,
 				59662451176A1A5300A12394 /* SpotAppDelegate.m in Sources */,
-				5966245D176A1A5300A12394 /* SpotViewController.m in Sources */,
+				59662467176A240300A12394 /* ImageViewController.m in Sources */,
+				5966246A176A292700A12394 /* HawaiiImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  SpotViewController.h
+//  ImageViewController.h
 //  Spot
 //
 //  Created by Marwan on 6/13/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SpotViewController : UIViewController
-
+@interface ImageViewController : UIViewController
+@property (nonatomic, strong) NSURL *imageURL;
 @end
