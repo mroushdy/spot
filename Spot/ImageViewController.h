@@ -10,4 +10,5 @@
 
 @interface ImageViewController : UIViewController
 @property (nonatomic, strong) NSURL *imageURL;
+- (void) setImageURL:(NSURL *)imageURL;
 @end
