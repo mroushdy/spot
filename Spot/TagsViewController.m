@@ -50,7 +50,7 @@
 
 - (NSString *)titleForRow:(NSUInteger)row 
 {
-    return [[[self.photosByTag allKeys] objectAtIndex:row] capitalizedString];
+    return [[[self.photosByTag allKeys] sortedArrayUsingSelector:@selector(compare:)][row] capitalizedString];
 }
 
 - (NSString *)subTitleForRow:(NSUInteger)row withTag:(NSString *)tag

@@ -8,6 +8,7 @@
 
 #import "FlickrPhotoTableViewController.h"
 #import "FlickrFetcher.h"
+#import "recentPhotos.h"
 
 @interface FlickrPhotoTableViewController ()
 
@@ -18,7 +19,7 @@
 
 - (void)setPhotos:(NSArray *)photos
 {
-
+    _photos = [photos sortedArrayUsingDescriptors:@[[[NSSortDescriptor alloc] initWithKey:FLICKR_PHOTO_TITLE ascending:YES]]];
     _photos = photos;
     [self.tableView reloadData];
 }
@@ -30,6 +31,7 @@
         if(indexPath) {
             if([segue.identifier isEqualToString:@"Show Image"]) {
                 if([segue.destinationViewController respondsToSelector:@selector(setImageURL:)]) {
+                    [recentPhotos addPhoto:self.photos[indexPath.row]];
                     NSURL *url = [FlickrFetcher urlForPhoto:self.photos[indexPath.row] format:FlickrPhotoFormatLarge];
                     [segue.destinationViewController performSelector:@selector(setImageURL:) withObject:url];
                     [segue.destinationViewController setTitle:[self titleForRow:indexPath.row]];
@@ -54,7 +56,7 @@
 
 - (NSString *)subTitleForRow:(NSUInteger)row
 {
-    return [self.photos[row][FLICKR_PHOTO_OWNER] description];
+    return [[self.photos[row] valueForKeyPath:FLICKR_PHOTO_DESCRIPTION] description];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
