@@ -22,6 +22,7 @@
 		5966246D176A37A800A12394 /* FlickrPhotoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5966246C176A37A800A12394 /* FlickrPhotoTableViewController.m */; };
 		59662473176A414700A12394 /* LatestFlickrPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59662472176A414700A12394 /* LatestFlickrPhotosViewController.m */; };
 		59662479176A42F100A12394 /* FlickrFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 59662478176A42F100A12394 /* FlickrFetcher.m */; };
+		5966247D176B7A5600A12394 /* TagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5966247C176B7A5600A12394 /* TagsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		59662476176A42F100A12394 /* FlickrAPIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrAPIKey.h; sourceTree = "<group>"; };
 		59662477176A42F100A12394 /* FlickrFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrFetcher.h; sourceTree = "<group>"; };
 		59662478176A42F100A12394 /* FlickrFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrFetcher.m; sourceTree = "<group>"; };
+		5966247B176B7A5600A12394 /* TagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsViewController.h; sourceTree = "<group>"; };
+		5966247C176B7A5600A12394 /* TagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				59662472176A414700A12394 /* LatestFlickrPhotosViewController.m */,
 				5966246B176A37A800A12394 /* FlickrPhotoTableViewController.h */,
 				5966246C176A37A800A12394 /* FlickrPhotoTableViewController.m */,
+				5966247B176B7A5600A12394 /* TagsViewController.h */,
+				5966247C176B7A5600A12394 /* TagsViewController.m */,
 				59662468176A292700A12394 /* HawaiiImageViewController.h */,
 				59662469176A292700A12394 /* HawaiiImageViewController.m */,
 				59662465176A240300A12394 /* ImageViewController.h */,
@@ -211,6 +216,7 @@
 				5966246D176A37A800A12394 /* FlickrPhotoTableViewController.m in Sources */,
 				59662473176A414700A12394 /* LatestFlickrPhotosViewController.m in Sources */,
 				59662479176A42F100A12394 /* FlickrFetcher.m in Sources */,
+				5966247D176B7A5600A12394 /* TagsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

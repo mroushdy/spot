@@ -18,6 +18,7 @@
 
 - (void)setPhotos:(NSArray *)photos
 {
+
     _photos = photos;
     [self.tableView reloadData];
 }
@@ -29,7 +30,6 @@
         if(indexPath) {
             if([segue.identifier isEqualToString:@"Show Image"]) {
                 if([segue.destinationViewController respondsToSelector:@selector(setImageURL:)]) {
-                    NSLog(@"a");
                     NSURL *url = [FlickrFetcher urlForPhoto:self.photos[indexPath.row] format:FlickrPhotoFormatLarge];
                     [segue.destinationViewController performSelector:@selector(setImageURL:) withObject:url];
                     [segue.destinationViewController setTitle:[self titleForRow:indexPath.row]];
