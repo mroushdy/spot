@@ -25,6 +25,7 @@
 		5966247D176B7A5600A12394 /* TagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5966247C176B7A5600A12394 /* TagsViewController.m */; };
 		59662484176F499B00A12394 /* recentPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = 59662483176F499B00A12394 /* recentPhotos.m */; };
 		59662488176F4E7400A12394 /* RecentFlickrPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59662487176F4E7400A12394 /* RecentFlickrPhotosViewController.m */; };
+		5966248B1770CA3100A12394 /* activityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5966248A1770CA3100A12394 /* activityIndicator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,8 @@
 		59662483176F499B00A12394 /* recentPhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = recentPhotos.m; path = Model/recentPhotos.m; sourceTree = "<group>"; };
 		59662486176F4E7400A12394 /* RecentFlickrPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentFlickrPhotosViewController.h; sourceTree = "<group>"; };
 		59662487176F4E7400A12394 /* RecentFlickrPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentFlickrPhotosViewController.m; sourceTree = "<group>"; };
+		596624891770CA3100A12394 /* activityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = activityIndicator.h; sourceTree = "<group>"; };
+		5966248A1770CA3100A12394 /* activityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = activityIndicator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				59662469176A292700A12394 /* HawaiiImageViewController.m */,
 				59662465176A240300A12394 /* ImageViewController.h */,
 				59662466176A240300A12394 /* ImageViewController.m */,
+				596624891770CA3100A12394 /* activityIndicator.h */,
+				5966248A1770CA3100A12394 /* activityIndicator.m */,
 				5966247A176A42F900A12394 /* FlickrFetcher */,
 				59662447176A1A5300A12394 /* Supporting Files */,
 			);
@@ -237,6 +242,7 @@
 				5966247D176B7A5600A12394 /* TagsViewController.m in Sources */,
 				59662484176F499B00A12394 /* recentPhotos.m in Sources */,
 				59662488176F4E7400A12394 /* RecentFlickrPhotosViewController.m in Sources */,
+				5966248B1770CA3100A12394 /* activityIndicator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

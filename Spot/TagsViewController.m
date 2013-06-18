@@ -8,6 +8,7 @@
 
 #import "TagsViewController.h"
 #import "FlickrFetcher.h"
+#import "activityIndicator.h"
 
 @interface TagsViewController ()
 @property (nonatomic, strong) NSArray *photos;
@@ -19,7 +20,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.photos = [FlickrFetcher stanfordPhotos];
+    [self.refreshControl addTarget:self action:@selector(loadLatestPhotosFromFlickr) forControlEvents:UIControlEventValueChanged];
+    [self loadLatestPhotosFromFlickr];
+}
+
+- (void)loadLatestPhotosFromFlickr
+{
+    [self.refreshControl beginRefreshing];
+    dispatch_queue_t loaderQ = dispatch_queue_create("flickr latest loader", NULL);
+    dispatch_async(loaderQ, ^{
+        [activityIndicator showActivityIndicator];
+        NSArray *latestPhotos = [FlickrFetcher stanfordPhotos];
+        [activityIndicator hideActivityIndicator];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.photos = latestPhotos;
+            [self.refreshControl endRefreshing];
+        });
+    });
 }
 
 - (void)setPhotos:(NSArray *)photos
