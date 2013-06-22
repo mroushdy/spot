@@ -26,6 +26,7 @@
 		59662484176F499B00A12394 /* recentPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = 59662483176F499B00A12394 /* recentPhotos.m */; };
 		59662488176F4E7400A12394 /* RecentFlickrPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59662487176F4E7400A12394 /* RecentFlickrPhotosViewController.m */; };
 		5966248B1770CA3100A12394 /* activityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5966248A1770CA3100A12394 /* activityIndicator.m */; };
+		5966248E1775E36B00A12394 /* FlickrCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5966248D1775E36B00A12394 /* FlickrCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,8 @@
 		59662487176F4E7400A12394 /* RecentFlickrPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentFlickrPhotosViewController.m; sourceTree = "<group>"; };
 		596624891770CA3100A12394 /* activityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = activityIndicator.h; sourceTree = "<group>"; };
 		5966248A1770CA3100A12394 /* activityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = activityIndicator.m; sourceTree = "<group>"; };
+		5966248C1775E36B00A12394 /* FlickrCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlickrCache.h; path = Model/FlickrCache.h; sourceTree = "<group>"; };
+		5966248D1775E36B00A12394 /* FlickrCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlickrCache.m; path = Model/FlickrCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +162,8 @@
 		59662485176F499F00A12394 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5966248C1775E36B00A12394 /* FlickrCache.h */,
+				5966248D1775E36B00A12394 /* FlickrCache.m */,
 				59662482176F499A00A12394 /* recentPhotos.h */,
 				59662483176F499B00A12394 /* recentPhotos.m */,
 			);
@@ -243,6 +248,7 @@
 				59662484176F499B00A12394 /* recentPhotos.m in Sources */,
 				59662488176F4E7400A12394 /* RecentFlickrPhotosViewController.m in Sources */,
 				5966248B1770CA3100A12394 /* activityIndicator.m in Sources */,
+				5966248E1775E36B00A12394 /* FlickrCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +371,7 @@
 				59662462176A1A5300A12394 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

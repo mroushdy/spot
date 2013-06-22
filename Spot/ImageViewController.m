@@ -8,6 +8,7 @@
 
 #import "ImageViewController.h"
 #import "activityIndicator.h"
+#import "FlickrCache.h"
 
 @interface ImageViewController () <UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -36,16 +37,28 @@
         self.scrollView.contentSize = CGSizeZero;
         self.imageView.image = nil;
         
+        if (!self.imageURL) return;
         [self.spinner startAnimating];
         
         NSURL *imageURL = self.imageURL;
         dispatch_queue_t imageFetchQ = dispatch_queue_create("image fetcher", NULL);
         dispatch_async(imageFetchQ, ^{
-            [activityIndicator showActivityIndicator];
-            NSData *imageData = [[NSData alloc] initWithContentsOfURL:self.imageURL];
-            [activityIndicator hideActivityIndicator];
-            UIImage *image = [[UIImage alloc] initWithData:imageData];
+            
+            //check to see if image is cached and if not get it then cache it
+            NSData *imageData;
+            NSURL *cachedURL = [FlickrCache cachedURLforURL:imageURL];
+            if (cachedURL) {
+                imageData = [[NSData alloc] initWithContentsOfURL:cachedURL];
+            } else {
+                [activityIndicator showActivityIndicator];
+                imageData = [[NSData alloc] initWithContentsOfURL:self.imageURL];
+                [activityIndicator hideActivityIndicator];
+            }
+            [FlickrCache cacheData:imageData forURL:self.imageURL];
+            
+            
             if(self.imageURL == imageURL) {
+                UIImage *image = [[UIImage alloc] initWithData:imageData];
                 dispatch_async(dispatch_get_main_queue(), ^ {
                     if(image) {
                         self.scrollView.zoomScale = 1.0;
@@ -68,7 +81,6 @@
 
 - (void)setImageScale
 {
-    [super viewDidLayoutSubviews];
     double wScale = self.scrollView.bounds.size.width / self.imageView.image.size.width;
     double hScale = self.scrollView.bounds.size.height / self.imageView.image.size.height;
     if (wScale > hScale) self.scrollView.zoomScale = wScale;
@@ -84,5 +96,7 @@
     self.scrollView.delegate = self;
     [self resetImage];
 }
+
+
 
 @end
